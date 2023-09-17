@@ -118,7 +118,7 @@
       
   }
 
-  .visualli-hidden {
+  .visually-hidden {
       /*Прихований заголовок*/
       position: absolute;
       width: 1px;
@@ -357,7 +357,7 @@
     text-align: center;
  
   }
-/*виправляв глянуть в старі дз fuff*/
+/*виправляв глянуть в старі дз */
   button {
       cursor: pointer;
       font-style: inherit;
@@ -633,7 +633,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-    margin-bottom: 16px;
+    
 
 }
 .form-sub{
@@ -691,4 +691,216 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 .button-telegram{
     margin-left: 16px;
     fill: #FFFFFF;
+}
+/*Инпут і емаіл*/
+
+
+/*Backdrop затемнення фону*/
+.backdrop{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: rgb(46, 47, 66, 0.40);
+   z-index: 999999;
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+   transition: opacity 250 ms cubic-bezier(0.4, 0, 0.2, 1),
+visibility 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/*          MODAL WINDOW                 */
+.modal-window{ position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);;
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+    background-color: #FCFCFC;
+     padding: 72px 24px 24px ;
+            
+}
+
+
+/*         BUTTON CLOSE                          */
+.close-icon{ display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: #E7E9FC;
+    line-height: 0;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    fill: #2E2F42;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 24px;
+
+}
+.close-icon:hover,
+.button_close:focus {
+    background-color: #404BBF;
+    fill: #FFFFFF;
+    border: none;
+}
+.close-icon-button{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*P стилізація*/
+.review-form-discription{
+    display: block;
+    text-align: center;
+     width: 360px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.03em;
+    color:#2E2F42;
+    margin-bottom: 16px;
+}
+.review-form-fielld-label{
+    display: block;
+        font-size: 12px;
+        color:#8E8F99;
+        font-weight: 400;
+        line-height: 1.16;
+        /* 116.667% */
+        letter-spacing: 0.04em;
+        margin-bottom: 4px;
+}
+.review-form-input{
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #2E2F4266;
+    padding-left: 38px;
+    border-color: transparent;
+    outline: transparent;
+    transition:
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.review-form-input:focus {
+    border: 1px solid #4D5AE5;
+    outline: transparent;
+}
+.review-form-input:focus + .review-form-fielld-icon{
+    fill: #4D5AE5;
+}
+.review-form-fielld-icon{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container-input-wraper{
+    position: relative;
+    margin-bottom: 8px
+}
+/*           TEXTARIA         */
+.textarea-coment-form{
+    font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #2E2F4266;
+        width: 100%;
+        height: 120px;
+        border-radius: 4px;
+        border: 1px solid rgba(46, 47, 66, 0.40);
+        padding: 8px 16px;
+        resize: none;
+        background-color: transparent;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        outline: transparent
+
+}
+.textarea-coment-form:focus{
+    border: 1px solid #4D5AE5;
+        outline: transparent;
+
+}
+.textarea-coment-form::placeholder {
+    color: #2E2F4266;
+}
+/*         CHECKBOX     */
+.container_checkbox {
+    margin-bottom: 24px;
+}
+.custom_checkbox{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+        border: 1px solid rgba(46, 47, 66, 0.40);
+        border-radius: 2px;
+        margin-right: 8px;
+        cursor: pointer;
+        fill: transparent;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+          fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+}
+.check_for_input:checked + .label_checkbox >
+.custom_checkbox{ background-color: #404BBF;
+                   fill: #F4F4FD;
+                   border: none;
+}
+.check_for_input:focus +.label_checkbox>.custom_checkbox{
+    outline: 2px solid #2E2F42;
+}
+
+.label_checkbox{
+    color: #8E8F99;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+}
+.link_user_privacy{
+        color: #4D5AE5;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.33;
+        letter-spacing: 0.04em;
+}
+.button_form_submit{
+        min-width: 169px;
+        height: 56px;
+            display: block;
+            padding: 16px 32px;
+            align-items: flex-start;
+            margin-left: auto;
+            margin-right: auto;
+             border-radius: 4px;
+            background-color:  #4D5AE5;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+            border: transparent;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+             align-items: center;
+            justify-content: center;
+            cursor: pointer;
+             transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
