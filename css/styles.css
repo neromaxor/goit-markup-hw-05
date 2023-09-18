@@ -753,15 +753,21 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
     margin-bottom: 24px;
 
 }
-.close-icon:hover,
-.button_close:focus {
-    background-color: #404BBF;
-    fill: #ffffff;
-    border: none;
-}
+
 .close-icon-button{
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.close-icon:hover,
+.close-icon:focus {
+    background-color: #404BBF;
+    border: none;
+}
+.close-icon:hover .close-icon-button,
+.close-icon:focus .close-icon-button{
+    fill: #ffffff;
+}
+
 /*P стилізація*/
 .review-form-discription{
     display: block;
